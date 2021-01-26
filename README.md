@@ -16,7 +16,7 @@
 | ------------------- | ---------- | ------------------------- |
 | email               | string     | unique: false ,null:false |メール
 | encrypted_password  | string     | null: false               |パスワード
-| nick_name           | string     | null: false               |ニックネーム
+| name                | string     | null: false               |ニックネーム
 ### Association
 - has_many :schedule
 - has_many :task
@@ -26,10 +26,10 @@
 | -------- | ---------- | ------------------------------ |
 | user     | references | null: false ,foreign_key: true |ユーザー
 | day      | references | null: false                    |日程
-| work_id  | references | null: false                    |作業内容
+| work_id  | references |                                |作業内容
 | item_id  | references | null: false                    |作業道具
-| place_id | references | null: false                    |場所
-| memo     | text       | null: false                    |メモ
+| place_id | references |                                |場所
+| memo     | text       |                                |メモ
 ### Association
 - belongs_to :user
 - has_one :task
@@ -41,9 +41,9 @@
 | day      | references | null: false                    |日程
 | work_id  | references | null: false                    |作業内容
 | item_id  | references | null: false                    |作業道具
-| place_id | references | null: false                    |場所
-| time     | references | null: false                    |作業時間
-| memo     | references | null: false                    |メモ
+| place_id | references |                                |場所
+| time     | references |                                |作業時間
+| memo     | text       |                                |メモ
 ### Association
 - belongs_to :user
 - belongs_to :schedule
